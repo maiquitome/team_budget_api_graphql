@@ -1,11 +1,13 @@
-# Script for populating the database. You can run it as:
-#
-#     mix run priv/repo/seeds.exs
-#
-# Inside the script, you can read and write to any of your
-# repositories directly:
-#
-#     TeamBudget.Repo.insert!(%TeamBudget.SomeSchema{})
-#
-# We recommend using the bang functions (`insert!`, `update!`
-# and so on) as they will fail if something goes wrong.
+alias TeamBudget.{Accounts.User, Repo}
+
+%{first_name: "Maiqui", last_name: "Tomé", email: "maiqui@teste.com", password_hash: "123456"}
+|> User.changeset()
+|> Repo.insert()
+
+%{first_name: "Mike", last_name: "Shinoda", email: "mike@teste.com", password_hash: "12345678"}
+|> User.changeset()
+|> Repo.insert()
+
+%{first_name: "Mayk", last_name: "Brito", email: "mayk@teste.com", password_hash: "12345678910"}
+|> User.changeset()
+|> Repo.insert()
