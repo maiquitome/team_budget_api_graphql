@@ -52,12 +52,11 @@ defmodule TeamBudget.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.10", only: :test},
-      {:absinthe, "~> 1.5.0"},
-      {:absinthe_plug, "~> 1.5"},
-      {:absinthe_relay, "~> 1.5.0"},
-      {:dataloader, "~> 1.0.0"},
-      {:absinthe_phoenix, "~> 2.0.0"},
-      {:absinthe_error_payload, "~> 1.0"}
+      {:absinthe, "~> 1.6"},
+      {:absinthe_relay, "~> 1.5", override: true},
+      {:absinthe_plug, "~> 1.5", override: true},
+      {:absinthe_phoenix, "~> 2.0"},
+      {:absinthe_error_payload, "~> 1.1"},
     ]
   end
 
